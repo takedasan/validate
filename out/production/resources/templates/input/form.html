@@ -3,10 +3,18 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>ほげ</title>
+    <title>バリデーション</title>
 </head>
 
 <body>
+    <form th:action="@{/input}" th:object="${inputForm}" method="post">
+        <div>
+            必須：
+            <input type="text" th:field="*{name}" />
+            <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" style="color: red"></span>
+        </div>
+        <button>送信</button>
+    </form>
 </body>
 
 </html>
