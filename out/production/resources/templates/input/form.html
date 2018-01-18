@@ -18,6 +18,13 @@
             <input type="text" th:field="*{age}" />
             <span th:if="${#fields.hasErrors('age')}" th:errors="*{age}" style="color: red"></span>
         </div>
+        <div>
+            相関チェック：
+            <input type="text" th:field="*{email1}" />
+            <span th:if="${#fields.hasErrors('email1')}" th:errors="*{email1}" style="color: red"></span>
+            <input type="text" th:field="*{email2}" />
+            <span th:if="${#fields.hasErrors('email2')}" th:errors="*{email2}" style="color: red"></span>
+        </div>
         <button>送信</button>
     </form>
 </body>
